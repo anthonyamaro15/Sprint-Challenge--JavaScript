@@ -39,19 +39,19 @@ const dinosaur3 = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(dinosaur.weight);
+// console.log(dinosaur.weight);
 
 // What was the diet of a velociraptor?
-console.log(dinosaur3.type);
+// console.log(dinosaur3.type);
 
 // How long was a stegosaurus?
-console.log(dinosaur3.size);
+// console.log(dinosaur3.size);
 
 // What time period did tyrannosaurus live in?
-console.log(dinosaur.lived);
+// console.log(dinosaur.lived);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(dinosaur.sound());
+// console.log(dinosaur.sound());
 
 // ==== Arrays ====
 
@@ -127,7 +127,7 @@ Once you have the new array created, sort the universities alphabetically and lo
 const universities = graduates.map(graduate => {
   return graduate.university;
 });
-console.log(universities);
+// console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -140,13 +140,13 @@ const contactInfo = graduates.map(graduate => {
   let email = graduate.email;
   return `${names}, ${email}`;
 });
-console.log(contactInfo);
+// console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = graduates.filter(graduate =>
   graduate.university.includes("Uni")
 );
-console.log(unisWithUni);
+// console.log(unisWithUni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -220,8 +220,8 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = zooAnimals.forEach(animal => {
-  let displayNames = [];
+const displayNames = [];
+zooAnimals.forEach(animal => {
   let name = `Name: ${animal.animal_name}`;
   let scientific = `Scientific: ${animal.scientific_name}`;
   displayNames.push(name, scientific);
@@ -237,7 +237,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 const lowCaseAnimalNames = zooAnimals.map(animal => {
   return animal.animal_name.toLocaleLowerCase();
 });
-console.log(lowCaseAnimalNames);
+// console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
 
@@ -245,7 +245,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = zooAnimals.filter(animal => animal.population < 5);
-console.log(lowPopulationAnimals);
+// console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
@@ -256,7 +256,7 @@ const populationTotal = zooAnimals.reduce(
   (acc, curr) => (acc += curr.population),
   0
 );
-console.log(populationTotal);
+// console.log(populationTotal);
 
 /*
 
