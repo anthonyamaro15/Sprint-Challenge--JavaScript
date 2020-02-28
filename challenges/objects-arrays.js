@@ -226,7 +226,7 @@ zooAnimals.forEach(animal => {
   let scientific = `Scientific: ${animal.scientific_name}`;
   displayNames.push(name, scientific);
 });
-console.log(displayNames);
+// console.log(displayNames);
 
 /* Request 2: .map()
 

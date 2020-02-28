@@ -37,8 +37,35 @@ const greeting = (firstName, lastName) => {
 /**
  * when creating a function it creates it own scope and when creating a variable inside the function, you have access to that variable only inside the function
  * and when using closures if you want to return a variable that its not in its own scope it reaches out the outer container to check if the variable exist there. If it does it gets the value from there, and if it does not exits in there it keeps going up. If it does not find it. it return  'variableName is not defined'.
+ * i belive this is call LEXICAL SCOPE
  *
  */
+
+// -----------------------------------------------------------------------------------------------
+// EXAMPLE
+
+// ---- when calling this function this will make 1500 arrays everytime you call this array.
+// ---- whenever you need a new item you will need to call the function again
+// function makeArrays(index) {
+//   const newArr = new Array(1500).fill("new array");
+//   return newArr[index]
+// }
+// console.log(makeArrays());
+// -----------------------------------------------------------------------------------------------
+
+// EXAMPLE WITH CLOSURES
+// ---- In this example you will only create the arrays once
+// ---- whenever you need an item you can just get it from the return function calling it like in the example below.
+// function makeArrayClosure() {
+//   const newArr = new Array(1500).fill("closures");
+//   return function(index) {
+//     return newArr[index];
+//   };
+// }
+// const createArrays = makeArrayClosure();
+// const getIndex = createArrays(500);
+// console.log(getIndex);
+// -----------------------------------------------------------------------------------------------
 
 // Explanation:
 
